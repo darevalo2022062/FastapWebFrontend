@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.gallery-container {
+    width: 100%;
+    height: calc(100vh - 92px)
+}
+
+.gallery-container .gallery-item {
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    filter: brightness(50%);
+    transition: width 0.3s ease, filter 0.3s ease;
+}
+
+
+.gallery-container .gallery-item:hover {
+    cursor: pointer;
+    width: 400px;
+    filter: brightness(100%);
+}
+
